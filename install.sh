@@ -11,8 +11,7 @@ sudo apt -o Dpkg::Options::='--force-confold' -y install wireguard nftables jq u
 if [ ! $? -eq 0 ]; then echo 'ERROR: cant download packages, try to make it itself: apt install wireguard nftables jq unzip pwgen'; exit 1; fi
 
 #prepare DB and wireguard binary
-unzip db.zip
-cp -r ./db /root/
+tar -xvzf ./db.tar.gz -C /root/
 chmod +x ./wireguard-ui
 cp ./wireguard-ui /root/
 
