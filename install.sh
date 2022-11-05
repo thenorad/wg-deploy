@@ -2,7 +2,7 @@
 #update system and install packages
 sudo apt update
 sudo apt -y upgrade
-sudo apt -y install wireguard git nftables jq unzip
+sudo apt -y install wireguard nftables jq unzip
 
 #prepare DB and wireguard binary
 unzip db.zip
