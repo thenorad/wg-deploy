@@ -1,6 +1,6 @@
 # wg-deploy, it's project for deploing Wireguard VPN + UI
 
-## Requirenments
+## Requirements
 1. Clean minimal installation of Ubuntu 22.04 (tested on Hetzner Cloud, other distros and providers need to test yourself)
 2. Installed `git` package, setup it by comand: `apt install git -y`
 3. Use `root` user when running script.
