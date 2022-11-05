@@ -108,13 +108,11 @@ username=$(cat /root/db/server/users.json | jq -r '.username')
 password=$(cat /root/db/server/users.json | jq -r '.password')
 if echo "$ip_addr" | grep -q ':'; then ip_addr="[$ip_addr]"; fi
 echo "$(tput setaf 10)
-
 ===================== Wireguard UI =====================
 URL: http://$ip_addr:5000/login
 Login: $username
 Password: $password
 ========================================================
-
 $(tput sgr0)"
 EOF2
 chmod +x /etc/update-motd.d/93-wireguard
