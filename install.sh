@@ -1,5 +1,7 @@
 #!/bin/bash
 #update system and install packages
+autorestart_policy=$(grep 'nrconf.*restart' /etc/needrestart/needrestart.conf | grep -v '^#')
+if [[ $autorestart_policy == '' ]]; then sed -i 's/#$nrconf{restart} = '"'"'i'"'"';/$nrconf{restart} = '"'"'a'"'"';/g' /etc/needrestart/needrestart.conf; fi
 sudo apt update
 if [ ! $? -eq 0 ]; then echo 'ERROR: cant update APT cache, try to make it itself: sudo apt update'; exit 1; fi
 sudo apt -o Dpkg::Options::='--force-confold' --force-yes -fuy upgrade
