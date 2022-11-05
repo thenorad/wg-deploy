@@ -7,8 +7,8 @@ sudo apt update
 if [ ! $? -eq 0 ]; then echo 'ERROR: cant update APT cache, try to make it itself: sudo apt update'; exit 1; fi
 sudo apt -o Dpkg::Options::='--force-confold' -y upgrade
 if [ ! $? -eq 0 ]; then echo 'ERROR: cant upgrade system, try to make it itself: sudo apt upgrade'; exit 1; fi
-sudo apt -o Dpkg::Options::='--force-confold' -y install wireguard nftables jq unzip
-if [ ! $? -eq 0 ]; then echo 'ERROR: cant download packages, try to make it itself: apt install wireguard nftables jq unzip'; exit 1; fi
+sudo apt -o Dpkg::Options::='--force-confold' -y install wireguard nftables jq unzip pwgen
+if [ ! $? -eq 0 ]; then echo 'ERROR: cant download packages, try to make it itself: apt install wireguard nftables jq unzip pwgen'; exit 1; fi
 
 #prepare DB and wireguard binary
 unzip db.zip
