@@ -21,9 +21,9 @@ ip_addr=$(curl -s -k 2ip.ru)
 sed -i "s/PUBLIC_VPN_ADDR/$ip_addr/g" /root/db/server/global_settings.json
 if [ -z $1 ]; then password=$(pwgen 30 -n1); else password="$1"; fi
 sed -i "s/PASSWORD/$password/g" /root/db/server/users.json
-if [ -z $2 ]; then addr="192.168.6.1/24"; else addr="$2"; fi
+if [ -z $2 ]; then addr='192.168.6.1/24'; else addr="$2"; fi
 sed -i "s/PRIVATE_VPN_ADDR/$addr/g" /root/db/server/interfaces.json
-if [ -z $3 ]; then port="21"; else port="$3"; fi
+if [ -z $3 ]; then port='21'; else port="$3"; fi
 sed -i "s/LISTEN_PORT/$port/g" /root/db/server/interfaces.json
 
 #create systemd services
