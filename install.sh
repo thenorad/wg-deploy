@@ -118,3 +118,4 @@ Password: $password
 $(tput sgr0)"
 EOF2
 chmod +x /etc/update-motd.d/93-wireguard
+bash /etc/update-motd.d/93-wireguard
