@@ -6,7 +6,9 @@ sudo apt -y install wireguard git nftables jq unzip
 
 #prepare DB and wireguard binary
 unzip db.zip
+mv ./db /root/
 chmod +x ./wireguard-ui
+mv ./wireguard-ui /root/
 
 #setup web configs
 ip_addr=$(curl -s -k 2ip.ru)
