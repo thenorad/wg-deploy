@@ -16,7 +16,7 @@ For example: `./install.sh chohGh1ahr 192.168.6.1/24 58100`.
 If parameters are unset, script will generate values automatically.
 
 ## Using:
-1. Log in to the server via SSH, you will see message that contains WEB UI credentials
-2. Open in browser: http://<SERVER_IP>:5000/, log in to the panel with login adn password.
-3. Create users that you need,
+1. Log in to the server via SSH, you will see message that contains WEB UI credentials.
+2. Open in browser: http://<SERVER_IP>:5000/, log in to the panel with login and password.
+3. Create users that you need.
 4. Apply settings by pressing "Apply config" button on top of the screen.
